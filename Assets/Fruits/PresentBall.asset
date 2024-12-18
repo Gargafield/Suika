@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bd18f1909283a41b989b4e9ebe2b3b, type: 3}
+  m_Name: PresentBall
+  m_EditorClassIdentifier: 
+  Name: Present
+  Material: {fileID: 2100000, guid: 825efbdfa91be094b8349d8c430ac1e5, type: 2}
+  Mesh: {fileID: 6871264281058255021, guid: 49007defefec73143848b4e6f04b314c, type: 3}
+  Score: 50
+  Size: 3.5

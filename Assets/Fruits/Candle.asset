@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41bd18f1909283a41b989b4e9ebe2b3b, type: 3}
+  m_Name: Candle
+  m_EditorClassIdentifier: 
+  Name: Candle
+  Material: {fileID: 2100000, guid: bd73d25c5f75e5a4999631b71555caa3, type: 2}
+  Mesh: {fileID: -3033996063522644917, guid: 76e400d2ecc0710439edf4437f225245, type: 3}
+  Score: 100
+  Size: 4
