@@ -4,7 +4,7 @@ public class InputManager : MonoBehaviour {
     public static InputManager Instance;
     
     // Debounce
-    public float debounceTime = 0.5f;
+    public float Debounce = 0.5f;
     private Debouncer _debouncer;
         
     private void Awake() {
@@ -16,7 +16,7 @@ public class InputManager : MonoBehaviour {
     }
     
     public void Start() {
-        _debouncer = new Debouncer(debounceTime);
+        _debouncer = new Debouncer(Debounce);
     }
     
     public void Update() {
