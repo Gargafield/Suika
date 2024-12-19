@@ -41,8 +41,6 @@ public class FruitManager : MonoBehaviour {
     }
     
     public void HandleCollision(GameObject fruit1, GameObject fruit2) {
-        Debug.Log(GameManager.Instance.State);
-        
         if (GameManager.Instance.State != GameState.Playing || !_debouncer.CanExecute()) {
             return;
         }
