@@ -42,24 +42,19 @@ public class GameManager : MonoBehaviour
     
     void Start() {
         HighScore = PlayerPrefs.GetInt("HighScore", 0);
-    }
-    
-    public async Awaitable Reset() {
-        Score = 0;
-        await FruitManager.Instance.Reset();
-    }
+    }    
     
     public async Awaitable GameOver() {
         if (State == GameState.GameOver) {
             return;
         }
         State = GameState.GameOver;
-        
         HighScore = Math.Max(Score, HighScore);
         
-        UIManager.Instance.IsGameOver = true;
-        await Reset();
+        Score = 0;
+        await FruitManager.Instance.Reset();
         
+        UIManager.Instance.IsGameOver = true;
         await Awaitable.WaitForSecondsAsync(2);
         UIManager.Instance.IsGameOver = false;
         
