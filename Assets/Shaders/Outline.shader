@@ -38,16 +38,15 @@ Shader "Custom/Outline" {
             }
 
             fixed4 frag (v2f i) : SV_Target {
-                // Create wireframe effect by checking proximity to edges
                 float2 uv = i.uv;
                 float edgeWidth = 0.05 * _WireThickness / 10.0;
                 
-                float left = step(uv.x, edgeWidth);
-                float right = step(1 - edgeWidth, uv.x);
-                float top = step(1 - edgeWidth, uv.y);
-                float bottom = step(uv.y, edgeWidth);
+                float left = uv.x <= edgeWidth;
+                float right = uv.x >= (1 - edgeWidth);
+                float top = uv.y >= (1 - edgeWidth);
+                float bottom = uv.y <= edgeWidth;
 
-                float wire = max(max(left, right), max(top, bottom));
+                float wire = (left || right) || (top || bottom);
                 
                 return fixed4(_WireColor.rgb, wire * _WireColor.a);
             }

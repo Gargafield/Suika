@@ -10,7 +10,7 @@ Shader "Custom/ProjectionShader"
         Pass
         {
             ZTest Always
-            ZWrite Off
+            ZWrite On
             Cull Off
             Blend SrcAlpha OneMinusSrcAlpha
 
@@ -45,11 +45,9 @@ Shader "Custom/ProjectionShader"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
-                return col;
+                return tex2D(_MainTex, i.uv);
             }
             ENDCG
         }
     }
-    FallBack "Diffuse"
 }
