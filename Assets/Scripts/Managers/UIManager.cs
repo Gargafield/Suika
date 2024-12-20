@@ -38,13 +38,6 @@ public class UIManager : MonoBehaviour
         ScoreLabel.GetComponent<TMPro.TextMeshProUGUI>().text = score.ToString();
     }
     
-    public async Awaitable GameOver() {
-        IsGameOver = true;
-        await Awaitable.WaitForSecondsAsync(1);
-        IsGameOver = false;
-        await Awaitable.WaitForSecondsAsync(1);
-    }
-    
     private void Awake() {
         if (Instance == null) {
             Instance = this;
